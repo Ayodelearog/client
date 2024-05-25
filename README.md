@@ -29,7 +29,9 @@ cd customer-location-pinning-system
 Run `node` server.js to spin up the server. 
 
 ### 3. Navigate to Client folder
-`cd` into client
+`cd` into client folder
 Run `npm run start` to start up the React application. 
 
 Everything should work as expected.
+
+```

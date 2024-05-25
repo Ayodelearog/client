@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Map from "./components/Map";
 import TypingAnimation from "./components/Typed";
 
@@ -27,22 +27,19 @@ function App() {
       
 
       return () => {
-        // clearTimeout(fadeOutTimeout);
         clearTimeout(removeSplashTimeout);
       };
     }
   }, []);
 
-  setTimeout(() => {
-    setSplashRemoved(true)
-  }, 3000); 
+  
 
   return (
     <>
       {firstLoad && (
         <div className={`splash ${splashDone ? "splash_done" : ""} ${splashRemoved ? "splash_remove" : ""}`}>
           <p>
-            <TypingAnimation setSplashDone={setSplashDone} />
+            <TypingAnimation setSplashDone={setSplashDone} setSplashRemoved={setSplashRemoved} />
           </p>
         </div>
       )}
